@@ -10,7 +10,7 @@ private:
 public:
 	explicit ZipCTL(std::string fname);
 
-	bool append_file(std::string fname);
+	bool append_file(std::string fname, int level = Z_DEFAULT_COMPRESSION);
 
 	~ZipCTL();
 };

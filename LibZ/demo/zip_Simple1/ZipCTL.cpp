@@ -23,7 +23,7 @@ ZipCTL::ZipCTL(std::string fname) {
 
 
 bool 
-ZipCTL::append_file(std::string fname){
+ZipCTL::append_file(std::string fname, int level){
 	using namespace std::tr2::sys;
 
 	path myfile(fname);
@@ -49,7 +49,7 @@ ZipCTL::append_file(std::string fname){
 		0,
 		"comment",
 		Z_DEFLATED,
-		Z_DEFAULT_COMPRESSION
+		level
 		);
 	if (ZIP_OK != ret){
 		fp.close();
