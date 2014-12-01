@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipCTL.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="zip_Simple1.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipCTL.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{f80f933f-352e-4b71-b2b1-d5d0fe3dac03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{3ac4e12b-f4c5-4565-ae6e-8aec0ec3b696}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
