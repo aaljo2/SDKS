@@ -44,3 +44,7 @@ LibZ/DebugStaticMT/
 *.sdf
 *.user
 LibZ/src/RCa03948
+*.opensdf
+LibBzip2/doc/
+LibBzip2/Debug/
+*.idb
