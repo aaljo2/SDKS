@@ -17,10 +17,7 @@ ZipCTL::ZipCTL(std::string fname) {
 	using namespace std::tr2::sys;
 
 	path myfile(fname);
-
 	int flags = exists(myfile) ? APPEND_STATUS_ADDINZIP : APPEND_STATUS_CREATE;
-
-
 	this->zf_ = zipOpen(fname.data(), flags);
 }
 
@@ -54,6 +51,10 @@ ZipCTL::append_file(std::string fname){
 		Z_DEFLATED,
 		Z_DEFAULT_COMPRESSION
 		);
+	if (ZIP_OK != ret){
+		fp.close();
+		return false;
+	}
 
 	const int BUF = 1024;
 	Bytef in[BUF];
@@ -61,7 +62,14 @@ ZipCTL::append_file(std::string fname){
 	do{
 		fp.read((char*)in, BUF);
 		auto readsize = fp.gcount();
-		zipWriteInFileInZip(this->zf_, in, static_cast<unsigned int>(readsize) );
+		ret = zipWriteInFileInZip(this->zf_, in, static_cast<unsigned int>(readsize));
+
+		if (ZIP_OK != ret){
+			fp.close();
+			zipCloseFileInZip(this->zf_);
+			return false;
+		}
+
 	} while (!fp.eof());
 	fp.close();
 
