@@ -54,7 +54,7 @@
 # include <utime.h>
 #endif
 
-
+#define ZLIB_INTERNAL
 #include "unzip.h"
 
 #define CASESENSITIVITY (0)
