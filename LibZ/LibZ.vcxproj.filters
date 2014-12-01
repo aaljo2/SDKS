@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{3937c254-1678-4c3e-acd0-e1df3bd6b0c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00e2b536-1dc8-4c92-8744-8d6e54e03fcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gzclose.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miniunz.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\adler32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ioapi.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mztools.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crc32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\compress.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\infback.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inflate.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trees.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uncompr.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zutil.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unzip.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zip.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzlib.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzread.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inffast.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzwrite.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\deflate.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inftrees.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\iowin32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\zlib.def">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\zlib1.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\inflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zip.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iowin32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trees.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\inftrees.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\inffast.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\inffixed.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ioapi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mztools.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\crc32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\deflate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unzip.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\crypt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zutil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gzguts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zconf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
