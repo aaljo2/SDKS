@@ -25,7 +25,6 @@ make_Auto_Close(T& data, FN& fn){
 	return Auto_Close<T, FN>(data, fn);
 };
 
-
 //ZipCTL
 class ZipCTL{
 private:
