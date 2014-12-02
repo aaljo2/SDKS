@@ -2,7 +2,6 @@
 #include <filesystem>
 #include <fstream>
 
-
 void operator<<(tm_zip& tmz_date, const time_t& gtime){
 	struct tm* tdata = std::localtime(&gtime);
 	tmz_date.tm_year = tdata->tm_year;
@@ -20,7 +19,6 @@ ZipCTL::ZipCTL(std::string fname) {
 	int flags = exists(myfile) ? APPEND_STATUS_ADDINZIP : APPEND_STATUS_CREATE;
 	this->zf_ = zipOpen(fname.data(), flags);
 }
-
 
 bool 
 ZipCTL::append_file(std::string fname, int level){
@@ -40,21 +38,14 @@ ZipCTL::append_file(std::string fname, int level){
 	info.tmz_date << gtime;
 	
 	auto ret = zipOpenNewFileInZip(
-		this->zf_,
-		myfile.filename().c_str(),
-		&info,
-		nullptr,
-		0,
-		nullptr,
-		0,
-		"comment",
-		Z_DEFLATED,
-		level
-		);
-	if (ZIP_OK != ret){
-		fp.close();
-		return false;
-	}
+		this->zf_,	myfile.filename().c_str(),
+		&info,nullptr,
+		0,nullptr,
+		0,"comment",
+		Z_DEFLATED,	level);
+	if (ZIP_OK != ret)	return false;
+			
+	auto aclose = make_Auto_Close(this->zf_, zipCloseFileInZip);
 
 	const int BUF = 1024;
 	Bytef in[BUF];
@@ -63,25 +54,14 @@ ZipCTL::append_file(std::string fname, int level){
 		fp.read((char*)in, BUF);
 		auto readsize = fp.gcount();
 		ret = zipWriteInFileInZip(this->zf_, in, static_cast<unsigned int>(readsize));
-
-		if (ZIP_OK != ret){
-			fp.close();
-			zipCloseFileInZip(this->zf_);
-			return false;
-		}
-
+		if (ZIP_OK != ret)	return false;
 	} while (!fp.eof());
-	fp.close();
 
-	zipCloseFileInZip(this->zf_);
 	return true;
 }
 
-
-ZipCTL::~ZipCTL()
-{
+ZipCTL::~ZipCTL(){
 	if (!this->zf_) return;
-
 	zipClose(zf_, "global_comment");
 	this->zf_ = nullptr;
 }

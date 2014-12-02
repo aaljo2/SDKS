@@ -8,8 +8,7 @@
 int _tmain(int argc, _TCHAR* argv[])
 {	
 	if (argc < 3) return 0;
-
-
+	
 	ZipCTL ctl(argv[1]);
 
 	for (int i = 2; i < argc; ++i){
