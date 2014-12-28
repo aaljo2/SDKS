@@ -25,7 +25,7 @@ int _tmain(int argc, _TCHAR* argv[]){
 	std::string mdir = ".";
 	std::vector<std::tr2::sys::path> filelist;
 	folderlist(std::tr2::sys::path(mdir), filelist);
-
+	
 	for (auto& item : filelist){
 		std::string mpath = item.string().substr(mdir.size() + 1);
 		std::cout << mpath << std::endl;
