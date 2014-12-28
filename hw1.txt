@@ -1,0 +1,8 @@
+LibTiff - 이태정
+LibPNG - 정태석
+LibTurboJpeg - 이재오
+LibOpenJpeg - 이민호
+LibTbb - 신재익
+LibCurl - 김다솜
+LibFreeType - 전향란
+LibExpat - 박희경
